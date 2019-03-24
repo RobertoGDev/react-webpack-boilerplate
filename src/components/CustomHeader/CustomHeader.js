@@ -1,18 +1,18 @@
-import React from "react";
-import Title from "../Title";
-import styles from "./CustomHeader.scss";
+import React from 'react';
+import Title from '../Title';
+import styles from './CustomHeader.scss';
 
 class CustomHeader extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      text: ""
+      text: ''
     };
   }
 
   handleClick() {
-    this.setState({ text: "Click" });
+    this.setState({ text: 'Click' });
   }
 
   render() {

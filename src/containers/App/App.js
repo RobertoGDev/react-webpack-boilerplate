@@ -1,5 +1,5 @@
-import React from "react";
-import CustomHeader from "../../components/CustomHeader";
+import React from 'react';
+import CustomHeader from '../../components/CustomHeader';
 
 const App = () => <CustomHeader />;
 

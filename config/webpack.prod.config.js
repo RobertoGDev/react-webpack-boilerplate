@@ -1,24 +1,24 @@
-import merge from "webpack-merge";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import CleanWebpackPlugin from "clean-webpack-plugin";
-import OptimizeCSSPlugin from "optimize-css-assets-webpack-plugin";
-import common from "../webpack.config";
+const merge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const common = require('../webpack.config');
 
 const cleanPlugin = new CleanWebpackPlugin();
 const cssMiniPlugin = new MiniCssExtractPlugin({
-  filename: "[name].css",
-  chunkFilename: "[hash].css"
+  filename: '[name].css',
+  chunkFilename: '[hash].css'
 });
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   devtool: false,
   plugins: [cleanPlugin, cssMiniPlugin],
   module: {
     rules: [
       {
         test: /\.(sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },

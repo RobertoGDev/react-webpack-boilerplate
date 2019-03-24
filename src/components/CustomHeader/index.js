@@ -1,3 +1,3 @@
-import CustomHeader from "./CustomHeader";
+import CustomHeader from './CustomHeader';
 
 export default CustomHeader;
